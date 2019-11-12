@@ -19,7 +19,7 @@ RUN CGO_ENABLED=0 go build -a -tags netgo -installsuffix netgo -ldflags "-X gith
 ################################################################################
 ## DEPLOYMENT CONTAINER
 ################################################################################
-FROM scratch
+FROM alpine
 
 EXPOSE 8080
 COPY --from=builder /serve /
